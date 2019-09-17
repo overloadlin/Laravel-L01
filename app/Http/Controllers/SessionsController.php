@@ -49,3 +49,4 @@ class SessionsController extends Controller
         return redirect('login');
 	}
 }
+
