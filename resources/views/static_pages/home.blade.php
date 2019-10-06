@@ -7,13 +7,16 @@
         <section class="status_form">
           @include('shared._status_form')
         </section>
-        <h4>动态列表</h4>
+        <h4>微博列表</h4>
         <hr>
         @include('shared._feed')
       </div>
       <aside class="col-md-4">
         <section class="user_info">
           @include('shared._user_info', ['user' => Auth::user()])
+        </section>
+        <section class="stats mt-2">
+          @include('shared._stats', ['user' => Auth::user()])
         </section>
       </aside>
     </div>
@@ -27,7 +30,7 @@
         一切，将从这里开始。
       </p>
       <p>
-        <a class="btn btn-lg btn-success" href="{{ route('users.create') }}" role="button">现在注册</a>
+        <a class="btn btn-lg btn-success" href="{{ route('signup') }}" role="button">现在注册</a>
       </p>
     </div>
   @endif
